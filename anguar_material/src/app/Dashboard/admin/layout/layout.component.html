@@ -1,0 +1,16 @@
+
+<mat-toolbar style="background-color: hsl(347, 14%, 88%);">
+    <img src="https://www.kriyaglobalitservices.com/assets/finalLogo/only_logo.png" alt="" width="150px" height="120px">
+  
+    <div class="space"></div>
+    <button mat-button [matMenuTriggerFor]="menu" class="menu"> <mat-icon >menu</mat-icon></button>
+    
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item> <a [routerLink]="['/admin/create']">Create</a></button>
+      <button mat-menu-item>Edite</button>
+      <button mat-menu-item>Delete</button>
+      <button mat-menu-item>User Accounts</button>
+      <button mat-menu-item>Roles</button>
+    </mat-menu>
+
+</mat-toolbar>

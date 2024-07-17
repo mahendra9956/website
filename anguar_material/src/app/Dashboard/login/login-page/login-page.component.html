@@ -1,0 +1,23 @@
+
+    <mat-card >
+        <form class="example-form" [formGroup]="login">
+            <mat-form-field class="example-full-width">
+              <mat-label>User Name</mat-label>
+              <input type="email"formControlName="email" placeholder="User Name"matInput>
+              <mat-error *ngIf="login.get('email')?.hasError('email')">This field is email must be required </mat-error>
+              <mat-error *ngIf="login.get('email')?.hasError('required')">This field is required </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password"  formControlName="password"  placeholder="Password"matInput>
+                <mat-error *ngIf="login.get('password')?.hasError('required')">This field is required </mat-error>
+                <mat-error *ngIf="login.get('password')?.hasError('minlength')">minmum 10 characters must be required</mat-error>
+              </mat-form-field>
+             
+                <button mat-button type="submit" class="btn-submit" (click)="onSubmit()">Submit</button>
+              
+    
+          </form>
+    </mat-card>
+
+
